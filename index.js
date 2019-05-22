@@ -36,6 +36,13 @@ class Customer {
     this.name = name;
     store.customers.push(this);
   }
+  deliveries() {
+    return store.deliveries.filter(
+      function(delivery) {
+        return delivery.neighborhoodId === this.id;
+      }.bind(this)
+    );
+  }
 
 }
 
