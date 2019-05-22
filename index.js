@@ -6,6 +6,10 @@ let customerId = 0;
 let mealId = 0;
 let deliveryId = 0;
 
+function onlyUnique(value, index, self) { 
+    return self.indexOf(value) === index;
+}
+
 class Neighborhood {
   constructor(name) {
     this.id = ++neighborhoodId;
@@ -25,6 +29,11 @@ class Neighborhood {
         return customer.neighborhoodId === this.id;
       }.bind(this)
     );
+  }
+  meals() {
+    return this.deliveries().map(function(delivery) {
+      return delivery.meal();
+    }).filter(onlyUnique);
   }
 
 }
