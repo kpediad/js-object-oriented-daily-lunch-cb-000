@@ -82,6 +82,9 @@ class Meal {
       return delivery.customer();
     }).filter(onlyUnique);
   }
+  static byPrice() {
+    return store.meals.sort(function (a, b) {return b.price - a.price;});
+  }
 
 }
 
