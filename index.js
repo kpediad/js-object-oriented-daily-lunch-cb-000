@@ -6,7 +6,7 @@ let customerId = 0;
 let mealId = 0;
 let deliveryId = 0;
 
-function onlyUnique(value, index, self) { 
+function onlyUnique(value, index, self) {
     return self.indexOf(value) === index;
 }
 
