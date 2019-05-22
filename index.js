@@ -43,6 +43,16 @@ class Customer {
       }.bind(this)
     );
   }
+  meals() {
+    return this.deliveries().map(function(delivery) {
+      return delivery.meal();
+    });
+  }
+  totalSpent() {
+    return this.meals().reduce(function(totalPrice, meal, i, meals) {
+      return totalPrice + meal.price;
+    }, 0);
+  }
 
 }
 
