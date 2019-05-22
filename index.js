@@ -32,7 +32,7 @@ class Meal {
     this.price = price;
     store.meals.push(this);
   }
-  
+
 }
 
 class Delivery {
@@ -43,5 +43,5 @@ class Delivery {
     this.customerId = customerId;
     store.deliveries.push(this);
   }
-  
+
 }
