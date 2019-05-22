@@ -35,7 +35,6 @@ class Neighborhood {
       return delivery.meal();
     }).filter(onlyUnique);
   }
-
 }
 
 class Customer {
@@ -62,7 +61,6 @@ class Customer {
       return totalPrice + meal.price;
     }, 0);
   }
-
 }
 
 class Meal {
@@ -104,5 +102,4 @@ class Delivery {
       }.bind(this)
     );
   }
-
 }
